@@ -33,6 +33,18 @@ class _MycontadorState extends State<Mycontador> {
     });
   }
 
+  void acrescentar2() {
+    setState(() {
+      count += 2;
+    });
+  }
+
+  void subtrair2() {
+    setState(() {
+      count -= 2;
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
@@ -42,39 +54,47 @@ class _MycontadorState extends State<Mycontador> {
         )),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Meu contador'),
-          centerTitle: true,
-        ),
-        body: Container(
-          child: Row(children: [
-            Expanded(
-              flex: 0,
-              child: Text(
-                '$count',
-              ),
+          appBar: AppBar(
+            title: Text('Meu contador'),
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '$count',
+                  style: TextStyle(fontSize: 30.0),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      child: Text('+1'),
+                      onPressed: counter,
+                    ),
+                    FloatingActionButton(
+                      child: Text('-1'),
+                      onPressed: subtrair,
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      child: Text('+2'),
+                      onPressed: acrescentar2,
+                    ),
+                    FloatingActionButton(
+                      child: Text('-2'),
+                      onPressed: subtrair2,
+                    )
+                  ],
+                )
+              ],
             ),
-            Expanded(
-                flex: 1,
-                child: FloatingActionButton(
-                  child: Text('Add2'),
-                  onPressed: counter,
-                )),
-            Expanded(
-                flex: 1,
-                child: FloatingActionButton(
-                  child: Text('Sub'),
-                  onPressed: subtrair,
-                )),
-            Expanded(
-                flex: 1,
-                child: FloatingActionButton(
-                  child: Text('Zerar'),
-                  onPressed: zerar,
-                ))
-          ]),
-        ),
-      ),
+          )),
     );
   }
 }
