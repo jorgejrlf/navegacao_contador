@@ -1,9 +1,9 @@
 <h1 align="center">
-  Aplicativo contador para android.
+  Aplicativo contador para android navegando entre páginas.
 </h1>
 
 <h3 align="center">
-  O projeto desenvolvido foi a criação de uma aplicação que conta quantas vezes o botão e pressionado.
+  O projeto desenvolvido foi a criação de uma aplicação que conta quantas vezes o botão e pressionado e permite navegar entre paginas da aplicação.
 </h3>
 
 <p align="center">
@@ -27,6 +27,7 @@ Projeto criado para colocar em pratica o conteúdo passado em um bootcamp que pa
 
 - Contador.
 - Botões de mais e menos.
+- Botão para navegação entre páginas
 
 ### :heavy_check_mark: Configurações necessárias
 
